@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 
 const FRIENDS = [
   {id: 1, name: 'Sam Samson', email: 'sam@example.com'},
@@ -12,6 +13,7 @@ const PENDING_REQUESTS = [
 ]
 
 const app = express()
+app.use(cors())
 
 // Think of app.get as a way of attaching addEventListener to your browser's address bar
 app.get('/', (req, res) => {
